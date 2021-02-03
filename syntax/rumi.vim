@@ -9,7 +9,7 @@ syn keyword rumiConstant true false
 syn match rumiString '\v"([^"]|\"){-}[^\\]"|""'
 syn match rumiNumber '\v<\d+(\.\d+)?'
 syn match rumiComment '\v//.*$'
-syn region rumiComment start=!/\*! end=!\*/!
+syn region rumiComment start=!/\*! end=!\*/! fold
 syn region rumiBlock start="{" end="}" transparent fold
 
 hi default link rumiKeyword Keyword
