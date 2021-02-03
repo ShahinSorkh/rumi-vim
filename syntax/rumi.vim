@@ -9,6 +9,7 @@ syn keyword rumiConstant true false
 syn match rumiString '\v"([^"]|\"){-}[^\\]"|""'
 syn match rumiNumber '\v<\d+(\.\d+)?'
 syn match rumiComment '\v//.*$'
+syn match rumiDirective '\v\@\w+'
 syn region rumiComment start=!/\*! end=!\*/! fold
 syn region rumiBlock start="{" end="}" transparent fold
 
@@ -19,6 +20,7 @@ hi default link rumiConstant Constant
 hi default link rumiString String
 hi default link rumiNumber Number
 hi default link rumiComment Comment
+hi default link rumiDirective PreProc
 
 let b:current_syntax = "rumi"
 
